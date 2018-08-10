@@ -77,7 +77,7 @@ public class NoteServiceTest {
         noteService.saveNote(note);
 
         // assert
-        assertEquals(5, noteService.getAllNotes().size());
+        assertEquals(4, noteService.getAllNotes().size());
 
         // tear down
         notes.remove(note);
