@@ -77,7 +77,7 @@ public class NoteServiceTest {
         noteService.saveNote(note);
 
         // assert
-        assertEquals(4, noteService.getAllNotes().size());
+        assertEquals(5, noteService.getAllNotes().size());
 
         // tear down
         notes.remove(note);
@@ -107,7 +107,7 @@ public class NoteServiceTest {
     @Test
     public void shouldSyncAllNotesWhenCallingDeleteNote() {
         // arrange
-        notes.remove(n2);
+        notes.remove(n1);
 
         // act
         noteService.deleteNote(2l);
@@ -116,7 +116,7 @@ public class NoteServiceTest {
         assertEquals(2, noteService.getAllNotes().size());
 
         // tear down
-        notes.add(n2);
+        notes.add(n1);
     }
 
     @Test
@@ -141,5 +141,9 @@ public class NoteServiceTest {
         assertEquals(-1, topWords.indexOf("more"));
 
     }
+
+
+
+
 
 }

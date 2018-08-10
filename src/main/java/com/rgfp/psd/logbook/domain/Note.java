@@ -53,7 +53,6 @@ public class Note {
     }
 
     public String getSummary() {
-        // not implemented
-        return "";
+        return (content.length() > 10)?content.substring(0,10):content;
     }
 }
